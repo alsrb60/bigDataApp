@@ -1,0 +1,109 @@
+<View style={styles.container}>
+      <View style={styles.days}>
+        <Text style={styles.date}>
+          {date.getFullYear()}년 {date.getMonth() + 1}월 {date.getDate()}일 {week[date.getDay()]}요일
+        </Text>
+      </View>
+      <View style={styles.data}>
+        <View style={styles.dataSquare1}>
+        </View>
+        <View style={styles.dataSquare2}>
+        </View>
+        <View style={styles.dataSquare3}>
+        </View>
+      </View>
+      <View style={styles.adSquare}>
+      </View>
+    </View>
+********************************************************************************************
+
+    ranks.map((rank,index)=>(
+      <View>
+        <Text>
+        {rank.title[0]}
+        </Text>
+      </View>
+    ))
+
+********************************************************************************************
+
+    <Text style={styles.textRank1}>
+            Rank1
+        </Text>
+        <Text style={styles.textRank2}>
+            Rank2
+        </Text>
+        <Text style={styles.textRank3}>
+            Rank3
+        </Text>
+        <Text style={styles.textRank4}>
+            Rank4
+        </Text>
+        <Text style={styles.textRank5}>
+            Rank5
+        </Text>
+
+
+********************************************************************************************
+textRank1:{
+    fontSize :60,
+    fontFamily:"Tmon",
+    marginTop:"80%",
+    marginLeft:"20%",
+    position:"absolute",
+  },
+  textRank2:{
+    fontSize :53,
+    fontFamily:"Tmon",
+    marginTop:"30%",
+    marginLeft:"35%",
+    position:"absolute",
+  },
+  textRank3:{
+    fontSize :47,
+    fontFamily:"Tmon",
+    marginTop:"120%",
+    marginLeft:"10%",
+    position:"absolute",
+  },
+  textRank4:{
+    fontSize :44,
+    fontFamily:"Tmon",
+    marginTop:"60%",
+    marginLeft:"10%",
+    position:"absolute",
+  },
+  textRank5:{
+    fontSize :41,
+    fontFamily:"Tmon",
+    marginTop:"105%",
+    marginLeft:"50%",
+    position:"absolute",
+    //transform:[{rotate:'90deg'}],
+  },
+
+********************************************************************************************
+12/13
+fontSize View 사이즈에 맞추는 방법?
+참고) https://stackoverflow.com/questions/48001774/how-to-adjust-font-size-to-fit-view-in-react-native-for-android
+
+객체안에 배열 생성하는 방법?
+참고) https://melonpeach.tistory.com/122
+
+
+      <View style={styles.data}>
+        {ranks.map((rank, index) => (
+          <View>
+            <Text
+              style={{
+                fontSize: trafficToFont[rank['ht:approx_traffic'][0]],
+                color: generateColor(),
+                fontFamily: 'Tmon',
+                margin: randomIntGenerate(0, 5),
+              }}>
+              {rank.title[0]}{' '}
+            </Text>
+          </View>
+        ))}
+      </View>
+        
